@@ -1,0 +1,21 @@
+<configs>
+	<!-- Tier5/Tier6 回収クエスト追加 -->
+	<append xpath="/quests/quest_list[@id='trader_quests']">
+		<quest id="tier5_fetch"/>
+		<quest id="tier6_fetch"/>
+	</append>
+	
+	<!-- Tier1-5 殲滅クエスト削除 -->
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier1_clear']" />
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier2_clear']" />
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier3_clear']" />
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier4_clear']" />
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier5_clear']" />
+
+	<!-- Tier2-5 殲滅/回収クエスト削除 -->
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier2_fetch_clear']" />
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier3_fetch_clear']" />
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier4_fetch_clear']" />
+	<remove xpath="/quests/quest_list[@id='trader_quests']/quest[@id='tier5_fetch_clear']" />
+		
+</configs>

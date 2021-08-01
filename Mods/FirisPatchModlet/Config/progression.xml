@@ -1,0 +1,26 @@
+<configs>
+	<!-- マスターシェフ5/シャム缶レシピ解放追加 -->
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='5,5']/@tags">,foodCanSham</append>
+
+	<!-- マスターシェフ1/サバイバルスープ缶レシピ解放追加 -->
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='1,5']/@tags">,foodCanSurvivalSoup</append>
+	
+	<!-- 高度エンジニアリング5/チェーンソー/オーガレシピ解放追加 -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='5']/@tags">,meleeToolAxeT3Chainsaw,meleeToolPickT3Auger</append>
+	
+	<!-- ロボット発明家の上方修正 -->
+	<!-- スキルレベルごとに扱える砲台の数を増やす -->
+	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='JunkTurretActiveCount' and @operation='base_add']/@level">1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='JunkTurretActiveCount' and @operation='base_add']/@value">0,1,1,2,3</set>
+	
+	<!-- スキルレベルごとに有効範囲拡張を拡大 -->
+	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='JunkTurretActiveRange' and @operation='base_set']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='JunkTurretActiveRange' and @operation='base_set']/@value">10,15,20,25,30,35,40</set>
+	
+	<!-- アーチェリーの上方修正 -->
+	<!-- スキルレベルごとのリロード速度上方修正 -->
+	<set xpath="/progression/perks/perk[@name='perkArchery']/effect_group/passive_effect[@name='ReloadSpeedMultiplier' and @operation='perc_add']/@level">1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[@name='perkArchery']/effect_group/passive_effect[@name='ReloadSpeedMultiplier' and @operation='perc_add']/@value">.1,.3,.5,.8,1.3</set>
+	
+
+</configs>

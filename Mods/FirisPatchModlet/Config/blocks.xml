@@ -1,0 +1,7 @@
+<configs>
+	
+	<!-- 切り株蜂蜜ドロップ率アップ -->
+	<set xpath="/blocks/block[@name='treeStump']/drop[@name='foodHoney']/@prob">.7</set>
+	<set xpath="/blocks/block[@name='treeStump']/drop[@name='foodHoney']/@count">1,2</set>
+	
+</configs>

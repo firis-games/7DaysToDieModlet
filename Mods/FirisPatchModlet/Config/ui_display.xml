@@ -1,0 +1,14 @@
+<configs>
+
+	<!-- 追加アイテム用（治療効果食料）UI追加 -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="foodWaterCurePlus" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
+		</item_display_info>
+	</append>
+	
+</configs>

@@ -1,0 +1,139 @@
+<configs>
+	<append xpath="/recipes">
+		<!-- 弾丸箱レシピ追加 -->
+		
+		<!-- マグナム -->
+		<recipe name="ammoBundle44MagnumBulletAP" count="1" craft_time="10">
+			<ingredient name="ammo44MagnumBulletAP" count="100"/>
+		</recipe>
+		<recipe name="ammoBundle44MagnumBulletHP" count="1" craft_time="10">
+			<ingredient name="ammo44MagnumBulletHP" count="100"/>
+		</recipe>
+		<recipe name="ammoBundle44MagnumBulletBall" count="1" craft_time="10">
+			<ingredient name="ammo44MagnumBulletBall" count="100"/>
+		</recipe>
+		
+		<!-- 9mm -->
+		<recipe name="ammoBundle9mmBulletAP" count="1" craft_time="10">
+			<ingredient name="ammo9mmBulletAP" count="100"/>
+		</recipe>
+		<recipe name="ammoBundle9mmBulletHP" count="1" craft_time="10">
+			<ingredient name="ammo9mmBulletHP" count="100"/>
+		</recipe>
+		<recipe name="ammoBundle9mmBulletBall" count="1" craft_time="10">
+			<ingredient name="ammo9mmBulletBall" count="100"/>
+		</recipe>
+		
+		<!-- 7.62mm -->
+		<recipe name="ammoBundle762mmBulletAP" count="1" craft_time="10">
+			<ingredient name="ammo762mmBulletAP" count="100"/>
+		</recipe>
+		<recipe name="ammoBundle762mmBulletHP" count="1" craft_time="10">
+			<ingredient name="ammo762mmBulletHP" count="100"/>
+		</recipe>
+		<recipe name="ammoBundle762mmBulletBall" count="1" craft_time="10">
+			<ingredient name="ammo762mmBulletBall" count="100"/>
+		</recipe>
+		
+		<!-- ショットガン -->
+		<recipe name="ammoBundleShotgunSlug" count="1" craft_time="10">
+			<ingredient name="ammoShotgunSlug" count="100"/>
+		</recipe>
+		<recipe name="ammoBundleShotgunBreachingSlug" count="1" craft_time="10">
+			<ingredient name="ammoShotgunBreachingSlug" count="100"/>
+		</recipe>
+		<recipe name="ammoBundleShotgunShell" count="1" craft_time="10">
+			<ingredient name="ammoShotgunShell" count="100"/>
+		</recipe>
+		
+		<!-- 燃焼ボルト -->
+		<recipe name="ammoBundleCrossbowBoltFlaming" count="1" craft_time="10">
+			<ingredient name="ammoCrossbowBoltFlaming" count="100"/>
+		</recipe>
+		<!-- 爆発ボルト -->
+		<recipe name="ammoBundleCrossbowBoltExploding" count="1" craft_time="10">
+			<ingredient name="ammoCrossbowBoltExploding" count="100"/>
+		</recipe>
+		<!-- 石ボルト -->
+		<recipe name="ammoBundleCrossbowBoltStone" count="1" craft_time="10">
+			<ingredient name="ammoCrossbowBoltStone" count="100"/>
+		</recipe>
+		<!-- 鉄ボルト -->
+		<recipe name="ammoBundleCrossbowBoltIron" count="1" craft_time="10">
+			<ingredient name="ammoCrossbowBoltIron" count="100"/>
+		</recipe>
+		<!-- 鉄鋼ボルト -->
+		<recipe name="ammoBundleCrossbowBoltSteelAP" count="1" craft_time="10">
+			<ingredient name="ammoCrossbowBoltSteelAP" count="100"/>
+		</recipe>
+		
+		<!-- 燃焼矢 -->
+		<recipe name="ammoBundleArrowFlaming" count="1" craft_time="10">
+			<ingredient name="ammoArrowFlaming" count="100"/>
+		</recipe>
+		<!-- 爆発矢 -->
+		<recipe name="ammoBundleArrowExploding" count="1" craft_time="10">
+			<ingredient name="ammoArrowExploding" count="100"/>
+		</recipe>
+		<!-- 石矢 -->
+		<recipe name="ammoBundleArrowStone" count="1" craft_time="10">
+			<ingredient name="ammoArrowStone" count="100"/>
+		</recipe>
+		<!-- 鉄矢 -->
+		<recipe name="ammoBundleArrowIron" count="1" craft_time="10">
+			<ingredient name="ammoArrowIron" count="100"/>
+		</recipe>
+		<!-- 鉄鋼矢 -->
+		<recipe name="ammoBundleArrowSteelAP" count="1" craft_time="10">
+			<ingredient name="ammoArrowSteelAP" count="100"/>
+		</recipe>
+		
+		<!-- ラッパ銃 -->
+		<recipe name="ammoBundleBlunderbuss" count="1" craft_time="10">
+			<ingredient name="ammoBlunderbuss" count="100"/>
+		</recipe>
+		
+		<!-- ロボット砲台シェル弾 -->
+		<recipe name="ammoBundleJunkTurretShell" count="1" craft_time="10">
+			<ingredient name="ammoJunkTurretShell" count="1000"/>
+		</recipe>
+		<!-- APロボット砲台弾 -->
+		<recipe name="ammoBundleJunkTurretAP" count="1" craft_time="10">
+			<ingredient name="ammoJunkTurretAP" count="1000"/>
+		</recipe>
+		<!-- ロボット砲台弾 -->
+		<recipe name="ammoBundleJunkTurretRegular" count="1" craft_time="10">
+			<ingredient name="ammoJunkTurretRegular" count="1000"/>
+		</recipe>
+		
+		<!-- ガソリン -->
+		<recipe name="ammoGasCanBundle" count="1" craft_time="10">
+			<ingredient name="ammoGasCan" count="10000"/>
+		</recipe>
+		<!-- 火薬 -->
+		<recipe name="resourceGunPowderBundle" count="1" craft_time="10">
+			<ingredient name="resourceGunPowder" count="1000"/>
+		</recipe>
+		<!-- ロックピック -->
+		<recipe name="resourceLockPickBundle" count="1" craft_time="10">
+			<ingredient name="resourceLockPick" count="50"/>
+		</recipe>
+		
+		<!-- 追加アイテム -->
+		<!-- サバイバルスープ缶 -->
+		<recipe name="foodCanSurvivalSoup" count="1" craft_time="90" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+			<ingredient name="foodRawMeat" count="20"/>
+			<ingredient name="foodCropCorn" count="5"/>
+			<ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="foodCropBlueberries" count="5"/>
+			<ingredient name="drinkJarPureMineralWater" count="1"/>
+		</recipe>
+		
+		<!-- 大量のカジノトークン -->
+		<recipe name="casinoCoinBundle" count="1" craft_time="10">
+			<ingredient name="casinoCoin" count="20000"/>
+		</recipe>
+		
+	</append>
+	
+</configs>

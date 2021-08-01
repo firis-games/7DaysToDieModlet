@@ -1,0 +1,9 @@
+<configs>
+
+	<!-- 自動販売機をアイテム買取可能に変更 -->
+	<set xpath="/traders/trader_info[@id='4']/@allow_sell">true</set>
+	<!-- 自動販売機のアイテム最低取扱い数を調整 -->
+	<set xpath="/traders/trader_info[@id='4']/@min_inventory">10</set>
+	<set xpath="/traders/trader_info[@id='4']/@min_items_swapped">10</set>
+	
+</configs>

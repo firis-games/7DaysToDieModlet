@@ -1,0 +1,104 @@
+<configs>
+
+	<!-- エンジン -->
+	<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">10</set>
+	<!-- ラジエーター -->
+	<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">20</set>
+	
+	<!-- 飲み物系スタック数調整 -->
+	<set xpath="/items/item[starts-with(@name,'drink')]/property[@name='Stacknumber' and @value='125']/@value">250</set>
+	<set xpath="/items/item[starts-with(@name,'drink')]/property[@name='Stacknumber' and @value='10']/@value">30</set>
+	
+	<!-- 食べ物系スタック数調整 -->
+	<set xpath="/items/item[starts-with(@name,'food')]/property[@name='Stacknumber' and @value='125']/@value">250</set>
+	<set xpath="/items/item[starts-with(@name,'food')]/property[@name='Stacknumber' and @value='10']/@value">30</set>
+	
+	<!-- 薬物系スタック数調整 -->
+	<set xpath="/items/item[starts-with(@name,'drug')]/property[@name='Stacknumber' and @value='10']/@value">20</set>
+	
+	<!-- 医療系スタック数調整 -->
+	<set xpath="/items/item[starts-with(@name,'medical')]/property[@name='Stacknumber' and @value='10']/@value">20</set>
+	<set xpath="/items/item[starts-with(@name,'medical')]/property[@name='Stacknumber' and @value='5']/@value">10</set>
+	
+	<!-- バンドル系 -->
+	<set xpath="/items/item[contains(@name,'Bundle')]/property[@name='Stacknumber' and @value='10']/@value">20</set>
+	<set xpath="/items/item[contains(@name,'Bundle')]/property[@name='Stacknumber' and @value='5']/@value">10</set>
+	
+	<!-- ロボット砲台マガジン拡張 -->
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">248</set>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='MagazineSize' and @operation='base_add']/@value">50,60</set>
+	
+	<!-- レシピ追加 -->
+	<!-- マスターシェフ5/シャム缶のレシピ解放追加 -->
+	<set xpath="/items/item[@name='foodCanSham']/property[@name='UnlockedBy']/@value">perkMasterChef,foodCanShamSchematic</set>
+	
+	<!-- 高度エンジニアリング5/チェーンソー/オーガのレシピ解放追加 -->
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/property[@name='UnlockedBy']/@value">perkAdvancedEngineering,meleeToolAxeT3ChainsawSchematic</set>
+	<set xpath="/items/item[@name='meleeToolPickT3Auger']/property[@name='UnlockedBy']/@value">perkAdvancedEngineering,meleeToolAxeT3ChainsawSchematic</set>
+	
+	<!-- アイテム追加 -->
+	<append xpath="/items">
+		<!-- サバイバルスープの缶詰 -->
+		<item name="foodCanSurvivalSoup">
+			<!-- 継承元アイテム -->
+			<property name="Extends" value="foodMeatStew"/>
+			<!-- 缶詰 -->
+			<property name="Material" value="Mmetal"/>
+			<!-- 説明欄 -->
+			<property name="DescriptionKey" value="foodCanSurvivalSoupDesc"/>
+			<!-- アイコン設定 -->
+			<property name="CustomIcon" value="foodCanSurvivalSoup" />
+			<!-- アイテム説明用UI（独自追加） -->
+			<property name="DisplayType" value="foodWaterCurePlus"/>
+			<!-- 値段 -->
+			<property name="EconomicValue" value="200"/>
+			<!-- スタック数 -->
+			<property name="Stacknumber" value="30"/>
+			<!-- レシピ解放設定 -->
+			<property name="UnlockedBy" value="perkMasterChef"/>
+			<!-- アイテム効果 -->
+			<effect_group tiered="false" name="Food Tier 1">
+				<!-- 食糧 -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="90"/>
+				<!-- 水 -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="90"/>
+				<!-- 健康度 -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+				<!-- 最大スタミナ -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<!-- 感染症の治療 -->
+				<display_value name="dCureInfection" value=".03"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+			</effect_group>
+			<!-- 食べる動作 -->
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- 使用後アイテム 空き瓶 -->
+				<property name="Create_item" value="drinkJarEmpty"/>
+			</property>
+		</item>
+		
+		<!-- カジノコインバンドル -->
+		<item name="casinoCoinBundle">
+			<!-- 継承元アイテム -->
+			<property name="Extends" value="resourceRockSmallBundle"/>
+			<!-- アイコン設定 -->
+			<property name="CustomIcon" value="casinoCoin"/>
+			<!-- 左上アイコン設定 -->
+			<property name="ItemTypeIcon" value="bundle"/>
+			<!-- スタック数 -->
+			<property name="Stacknumber" value="20"/>
+			<property class="Action0">
+				<property name="Create_item" value="casinoCoin"/>
+				<property name="Create_item_count" value="20000"/>
+			</property>
+		</item>
+		
+	</append>
+
+</configs>

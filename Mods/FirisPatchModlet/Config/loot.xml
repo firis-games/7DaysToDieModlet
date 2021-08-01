@@ -1,0 +1,14 @@
+<configs>
+
+	<!-- 自転車のインベントリ拡張 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">10,2</set>
+	<!-- ミニバイクのインベントリ拡張 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">10,4</set>
+	<!-- オートバイのインベントリ拡張 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">10,6</set>
+	<!-- 自動車のインベントリ拡張 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">10,9</set>
+	<!-- オートジャイロのインベントリ拡張 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">10,6</set>
+	
+</configs>

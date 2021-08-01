@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+vehicleWheels,vehicles,item,,,Wheel,,Rad,Rueda,Roue,Ruota,車輪,바퀴,Koło,Roda,Колесо,Tekerlek,车轮,車輪,Rueda
+foodCanSurvivalSoup,items,Food,,,Can of Survival Soup,,,,,,サバイバルスープ缶,,,,,,,,
+foodCanSurvivalSoupDesc,items,Food,,,"This is a preserved food made by survivors for nutritional support. Nutritious!",,,,,,生存者が栄養補給を目的に作った保存食です。栄養満点！,,,,,,,,
+casinoCoinBundle,items,Item,,,Stack of Duke's Casino Token (20000),,,,,,大量のカジノトークン（20000）,,,,,,,,
+casinoCoinBundleDesc,items,Item,,,"A large number of casino coins are compactly packed. This item can be used to open the package and remove the contents.",,,,,,大量のカジノトークンがコンパクトにまとめられています。このアイテムを使用すると開封や内容品の取り出しが可能です。,,,,,,,,
