@@ -4,4 +4,39 @@
 	<set xpath="/blocks/block[@name='treeStump']/drop[@name='foodHoney']/@prob">.7</set>
 	<set xpath="/blocks/block[@name='treeStump']/drop[@name='foodHoney']/@count">1,2</set>
 	
+	<!-- 作業台 -->
+	<remove xpath="/blocks/block[@name='workbench']/drop[@event='Harvest']" />
+	<remove xpath="/blocks/block[@name='workbench']/drop[@event='Destroy']" />
+	<append xpath="/blocks/block[@name='workbench']">
+		<drop event="Destroy" name="workbench" count="1" prob="1"/>
+	</append>
+	
+	<!-- セメントミキサー -->
+	<remove xpath="/blocks/block[@name='cementMixer']/drop[@event='Harvest']" />
+	<remove xpath="/blocks/block[@name='cementMixer']/drop[@event='Destroy']" />
+	<append xpath="/blocks/block[@name='cementMixer']">
+		<drop event="Destroy" name="cementMixer" count="1" prob="1"/>
+	</append>
+	
+	<!-- 炉 -->
+	<remove xpath="/blocks/block[@name='forge']/drop[@event='Harvest']" />
+	<remove xpath="/blocks/block[@name='forge']/drop[@event='Destroy']" />
+	<append xpath="/blocks/block[@name='forge']">
+		<drop event="Destroy" name="forge" count="1" prob="1"/>
+	</append>
+	
+	<!-- 化学実験ステーション -->
+	<remove xpath="/blocks/block[@name='chemistryStation']/drop[@event='Harvest']" />
+	<remove xpath="/blocks/block[@name='chemistryStation']/drop[@event='Destroy']" />
+	<append xpath="/blocks/block[@name='chemistryStation']">
+		<drop event="Destroy" name="chemistryStation" count="1" prob="1"/>
+	</append>
+	
+	<!-- キャンプファイヤー -->
+	<remove xpath="/blocks/block[@name='campfire']/drop[@event='Harvest']" />
+	<remove xpath="/blocks/block[@name='campfire']/drop[@event='Destroy']" />
+	<append xpath="/blocks/block[@name='campfire']">
+		<drop event="Destroy" name="campfire" count="1" prob="1"/>
+	</append>
+	
 </configs>
